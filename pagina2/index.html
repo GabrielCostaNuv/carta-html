@@ -33,11 +33,7 @@
         color: #2b2b2b;
       }
 
-      main {
-        display: flex;
-        flex-direction: column;
-        gap: 32px;
-      }
+
 
       h1 {
         font-size: 1.6rem;
@@ -66,19 +62,26 @@
 
       header .declaracao-container div:first-child {
         display: flex;
-        gap: 2px;
         margin-bottom: 8px;
         align-items: center;
       }
 
+      header .declaracao-container div:first-child svg:first-child {
+        margin-right: 4px;
+      }
+
       .fatura-container {
         border-bottom: 1px solid #dcdee5;
-        padding-block: 16px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        padding-bottom: 16px;
       }
 
       .fatura-container table {
         width: 100%;
         margin-top: 12px;
+        /* border-collapse: separate;
+        border-spacing: .8rem; */
       }
 
       .fatura-container th,
@@ -94,7 +97,8 @@
       td {
         font-size: 1rem;
         font-weight: 400;
-        padding-block: 8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
       }
 
       .assinatura-container {
@@ -103,7 +107,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2px;
       }
 
       .assinatura-container p {
