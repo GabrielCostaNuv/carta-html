@@ -39,6 +39,7 @@
 
       h2 {
         font-size: 1.4rem;
+        margin-bottom: 1.4rem;
       }
 
       h2 + p {
@@ -68,11 +69,117 @@
         margin-right: 4px;
       }
 
+      .cabecalho-container p:first-child {
+        margin-bottom: 8px;
+      }
+
+      .table-container table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+
+      .table-container th,
+      .table-container td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: center;
+      }
+
+      .plano-container {
+        border-top: 1px solid #dcdee5;
+        border-bottom: 1px solid #dcdee5;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-bottom: 32px;
+      }
+
+      .plano-container table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 1.6rem;
+      }
+
+      .plano-container th,
+      .plano-container td {
+        text-align: left;
+      }
+
+      th {
+        font-weight: bold;
+        color: #44474a;
+      }
+
+      td {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .info-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 4px;
+        border-bottom: 0.1rem solid #dcdee5;
+        width: 400px;
+        margin-bottom: 4px;
+      }
+
+      .info-item label {
+        font-size: 1rem;
+        font-weight: 400;
+        color: black;
+      }
+
+      .custom-checkbox label {
+        color: #9297a9;
+        margin-right: 4px;
+      }
+
+      .check-square {
+        width: 0.924rem;
+        height: 0.924rem;
+        border: 0.1rem solid #68c19d;
+        background-color: #b8f6dc;
+        border-radius: 0.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: #68c19d;
+      }
+
+      .check-square::after {
+        content: "✔";
+      }
+
+      .x-square {
+        width: 0.924rem;
+        height: 0.924rem;
+        border: 0.1rem solid #ef5c93;
+        background-color: #f6c9da;
+        border-radius: 0.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: #ef5c93;
+      }
+
+      .x-square::after {
+        content: "✗";
+      }
+
       .fatura-container {
         border-bottom: 1px solid #dcdee5;
         margin-top: 32px;
         margin-bottom: 32px;
         padding-bottom: 16px;
+      }
+
+      .fatura-container h2{
+        margin-bottom: 0px;
       }
 
       .fatura-container table {
@@ -87,12 +194,7 @@
         text-align: left;
       }
 
-      th {
-        font-weight: bold;
-        color: #44474a;
-      }
-
-      td {
+      .fatura-container td {
         font-size: 1rem;
         font-weight: 400;
         padding-top: 8px;
@@ -142,7 +244,7 @@
 
         <div>
           <!-- <img src="./assets/ans.svg" alt="Imagem da ANS" />
-              -->
+            -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="113"
@@ -168,7 +270,7 @@
 
       <div>
         <!-- <img src="./assets/logo-blue.svg" alt="Logo Blue" />
-            -->
+          -->
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -206,6 +308,157 @@
     </header>
 
     <main>
+      <div class="cabecalho-container">
+        <p>Salvador, 16 de Janeiro de 2025</p>
+
+        <p>
+          Atendendo a sua solicitação seguem as informações referentes ao seu
+          período de permanência nesta operadora. A INTEGRA ASSISTENCIA MEDICA
+          S.A., inscrito no CNPJ/MF sob nº44.477.823/0001-88 e na Agência
+          Nacional de Saúde Suplementar - ANS sob nº 42.317-3, situado à Av
+          Engenheiro Luiz Carlos Berrini, 105 Bairro Cidade Monções, Município
+          de São Paulo / SP, declara para os devidos fins de direito, informo
+          que o mesmo é beneficiário do plano
+          <strong>BLUE START APT SC</strong> na
+          <strong>ANS nº 494342232 </strong> conforme informações abaixo:
+        </p>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Categoria</th>
+              <th>Segurado em Remissão</th>
+              <th>Data de Nascimento</th>
+              <th>CPF</th>
+              <th>Matrícula do Plano</th>
+              <th>Início</th>
+              <th>Fim</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- DINAMICO -->
+              <td>Exemplo Nome</td>
+              <td>Exemplo Categoria</td>
+              <td>Sim</td>
+              <td>01/01/1990</td>
+              <td>123.456.789-00</td>
+              <td>ABC123</td>
+              <td>01/01/2020</td>
+              <td>31/12/2025</td>
+              <td>Ativo</td>
+              <!-- DINAMICO -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="plano-container">
+        <h2>Dados do plano</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nome do plano</th>
+              <th>N° de registro ANS</th>
+              <th>Tipo de contratação</th>
+              <th>Acomodação</th>
+              <th>Abrangência</th>
+              <th>Segmentação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- DINAMICO -->
+              <td>BLUE START APT SC</td>
+              <td>494342232</td>
+              <td>Compulsório</td>
+              <td>Apartamento</td>
+              <td>Apartamento</td>
+              <td>Ambulatorial + Hospitalar com obstetrícia</td>
+              <!-- DINAMICO -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-container">
+        <h2>Informações complementares</h2>
+        <div class="info-item">
+          <label>Beneficiário ingressou na Operadora via Portabilidade?</label>
+          <div class="custom-checkbox">
+            <!-- DINAMICO -->
+            <label for="portabilidade">Sim</label>
+            <span class="check-square"></span>
+            <!-- DINAMICO -->
+          </div>
+        </div>
+        <div class="info-item">
+          <label
+            >Beneficiário ingressou nesta Operadora via Transferência de
+            Carteira?</label
+          >
+          <div class="custom-checkbox">
+            <!-- DINAMICO -->
+            <label for="transferencia1">Não</label>
+            <span class="x-square"></span>
+            <!-- DINAMICO -->
+          </div>
+        </div>
+        <div class="info-item">
+          <label
+            >Beneficiário ingressou nesta Operadora via Transferência de
+            Carteira?</label
+          >
+          <div class="custom-checkbox">
+            <!-- DINAMICO -->
+            <label for="transferencia2">Não</label>
+            <span class="x-square"></span>
+            <!-- DINAMICO -->
+          </div>
+        </div>
+        <div class="info-item">
+          <label>Beneficiário está internado?</label>
+          <div class="custom-checkbox">
+            <!-- DINAMICO -->
+            <label for="internado">Sim</label>
+            <span class="check-square"></span>
+            <!-- DINAMICO -->
+          </div>
+        </div>
+        <div class="info-item">
+          <label>Cumpriu Cobertura Parcial Temporária (CPT)?</label>
+          <div class="custom-checkbox">
+            <!-- DINAMICO -->
+            <label for="cpt">Não</label>
+            <span class="x-square"></span>
+            <!-- DINAMICO -->
+          </div>
+        </div>
+        <div class="info-item">
+          <label>Possui carências a cumprir?</label>
+          <div class="custom-checkbox">
+            <!-- DINAMICO -->
+            <label for="carencias">Não</label>
+            <span class="x-square"></span>
+            <!-- DINAMICO -->
+          </div>
+        </div>
+        <div class="info-item">
+          <label>O plano foi adaptado à Lei 9656/98?</label>
+          <div class="custom-checkbox">
+            <!-- DINAMICO -->
+            <label for="lei">Sim</label>
+            <span class="check-square"></span>
+            <!-- DINAMICO -->
+          </div>
+        </div>
+      </div>
+
       <div class="fatura-container">
         <h2>Faturas</h2>
         <p>Ùltimos 3 meses</p>
